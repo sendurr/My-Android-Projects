@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My_first_app</string>
+
+    <string name="hello_world">Sendurr s Phone!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Power_switch">Power</string>
+</resources>
