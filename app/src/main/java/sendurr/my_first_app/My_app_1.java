@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.Switch;
+import android.widget.TextView;
 
 
 public class My_app_1 extends Activity {
@@ -22,6 +26,8 @@ public class My_app_1 extends Activity {
         return true;
     }
 
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -37,19 +43,22 @@ public class My_app_1 extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onSwitchTouch(View view) {
-        int a;
-        a = view.getId();
-        //textview.setText("Power Turned On");
-       // boolean on = ((Switch1) view).isChecked();
+    Switch s1 = (Switch) findViewById(R.id.switch1);
+    TextView t2 = (TextView) findViewById(R.id.textView2);
+    s1.setChecked(true);
+    mySwitch.setChecked(true);
+    /*s1.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
-        if (a.isChecked()) {
-            // Enable vibrate
-            //textView2.setText("Power Turned On");
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView,
+        boolean isChecked) {
+
+            if(isChecked){
+                t2.setText("Power turned ON");
+            }else{
+                t2.setText("Power turned OFF");
+            }
+
         }
-        //else {
-            // Disable vibrate
-            //textView2.setText("Power Turned Off");
-  //      }
-    }
-}
+    });*/
+};
